@@ -1,0 +1,443 @@
+/* From Uiverse.io by joe-watson-sbf */
+.container {
+  color: #ebe2e0;
+  position: relative;
+
+}
+
+
+.container::before,
+.container::after {
+  content: "";
+  background-color: #f9def9;
+  position: absolute;
+}
+
+.container::before {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 30%;
+  right: 7%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+  border: 1px solid;
+}
+
+.container .box {
+  width: 16.175em;
+  height: 21.175em;
+  padding: 1rem;
+  background-color: rgba(122, 116, 116, 0.585);
+  border: 1px solid rgba(0, 0, 0, 0.429);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+
+}
+
+.container .box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .box .title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.container .box div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.container .box div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.container .box div span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.container .box div span:nth-child(3) {
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.container .box:hover {
+  box-shadow: 0px 0px 20px 1px #ca763a;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9def9;
+}
+
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 400px;
+  /* Set a fixed height */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  /* Maintain aspect ratio */
+}
+
+#secondaryButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.new-container {
+  font-family: system-ui, '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 'Ubuntu', Cantarell, 'Helvetica Neue';
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  
+}
+
+.new-column {
+  background-color: #291a40;
+  color: #ccc;
+  width: 49%;
+  height: auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 13px;
+}
+
+.new-column:hover {
+  box-shadow: 0px 0px 20px 3px #4d4d4d;
+  border: 2px solid rgba(255, 255, 255, 0.454);
+  transform: translateY(-0.5rem) scale(1);
+  transition: all 500ms ease;
+}
+
+.new-column h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.new-column p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+
+.cont {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sect {
+  font-family: system-ui, '-apple-system', 'Segoe UI', 'Ubuntu', 'Helvetica Neue';
+  background: #291a40;
+  padding: 20px;
+  height: 230px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.sect h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sect p {
+  text-align: justify;
+  /* font-size: 16px;*/
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.sect:hover {
+  box-shadow: 0px 0px 20px 3px #4d4d4d;
+  transform: translateY(-0.5rem) scale(1);
+  transition: all 500ms ease;
+}
+
+@media (max-width: 600px) {
+  .dropdown-container {
+    flex-direction: column;
+    /* Stack dropdowns vertically on small screens */
+    width: 100%;
+    /* Full width on small screens */
+  }
+
+  .dropbtn {
+    width: 100%;
+    /* Full width for buttons on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .box {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  nav * {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}
+
+
+/* From Uiverse.io by ilkhoeri */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* Space between dropdowns */
+}
+
+.dropdown {
+  border: 1px solid #575757;
+  border-radius: 12px;
+  transition: all 300ms;
+  display: flex;
+  flex-direction: column;
+  min-height: 58px;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  max-width: 298px;
+  width: 100%;
+  /* Make it responsive */
+}
+
+.dropdown input {
+  display: none;
+  /* Hide the checkbox */
+}
+
+.dropdown input:checked~.list {
+  opacity: 1;
+  transform: translateY(-3rem) scale(1);
+  transition: all 500ms ease;
+  margin-top: 32px;
+  padding-top: 4px;
+  margin-bottom: -32px;
+}
+
+
+.dropdown input:where(:checked)+.trigger {
+  margin-bottom: 1rem;
+}
+
+.dropdown input:where(:checked)+.trigger:before {
+  rotate: 180deg;
+  transition-delay: 0ms;
+}
+
+.dropdown input:where(:checked)+.trigger::after {
+  content: " ";
+}
+
+
+.dropdown input:not(:checked)~.list {
+  opacity: 0;
+  transform: translateY(3rem);
+  margin-top: -100%;
+  user-select: none;
+  height: 0px;
+  max-height: 0px;
+  pointer-events: none;
+  transition: all 500ms ease-out;
+}
+
+.trigger {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-weight: 600;
+  color: inherit;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  height: max-content;
+  position: relative;
+  z-index: 99;
+  border-radius: inherit;
+  background-color: white;
+}
+
+.trigger:before,
+.trigger::after {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trigger:before {
+  content: "›";
+  transform: rotate(-90deg);
+  width: 17px;
+  height: 17px;
+  color: #262626;
+  border-radius: 2px;
+  font-size: 26px;
+  transition: all 350ms ease;
+  transition-delay: 85ms;
+}
+
+.trigger:after {
+  content: " ";
+}
+
+.list {
+  height: 100%;
+  max-height: 20rem;
+  width: calc(100% - calc(var(--w-scrollbar) / 2));
+  display: grid;
+  grid-auto-flow: row;
+  overflow: hidden auto;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin-right: -8px;
+  --w-scrollbar: 8px;
+}
+
+.listitem {
+  height: 100%;
+  width: calc(100% + calc(calc(var(--w-scrollbar) / 2) + var(--w-scrollbar)));
+  list-style: none;
+}
+
+.article {
+  padding: 1.2rem;
+  /* Increased padding for more space */
+  border-radius: 8px;
+  font-size: 16px;
+  /* Slightly larger font size */
+  font-weight: 400;
+  /* Lighter font weight for a softer look */
+  text-align: left;
+  /* Align text to the left for better readability */
+  width: 100%;
+  border: 1px solid #91a2d4;
+  /* Keep the border color */
+  display: inline-block;
+  background-color: #EBE2E0;
+  color: BLACK;
+  /* Darker text color for better contrast */
+  line-height: 1.6;
+  /* Increased line height for readability */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Smooth transition for hover effects */
+}
+
+.webkit-scrollbar::-webkit-scrollbar {
+  width: var(--w-scrollbar);
+  height: var(--w-scrollbar);
+  border-radius: 9999px;
+}
+
+.webkit-scrollbar::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+.webkit-scrollbar::-webkit-scrollbar-thumb {
+  background: #0000;
+  border-radius: 9999px;
+}
+
+.webkit-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: #c1c2c5;
+}
+
+
+/* Add a hover effect */
+.article:hover {
+  transform: translateY(-2px);
+  /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+/* Optional: Add a text shadow */
+.article {
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+  /* Subtle text shadow */
+}
+
+/* Optional: Add a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  /* Apply the font to the body */
+}
